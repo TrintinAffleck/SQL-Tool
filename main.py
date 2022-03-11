@@ -28,7 +28,12 @@ class Sqlclass:
         
 
     def SqlConnect(self, auths: str):
-        auth_list = ('Windows', 'Windows Authentication', 'Trusted Connection')
+        auth_list = ('Windows'
+         ,'Windows Authentication'
+         ,'Trusted Connection'
+         ,'windows'
+         ,'windows authentication'
+         ,'trusted connection')
         if auths in auth_list:
             trusted_conn = True
             params = quote_plus(
