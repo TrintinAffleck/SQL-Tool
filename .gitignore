@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+#My workspace
+SQL-Tool.code-workspace
+
 # C extensions
 *.so
 
