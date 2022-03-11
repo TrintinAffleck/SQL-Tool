@@ -4,7 +4,6 @@ from urllib.parse import quote_plus
 from Reading_Script import *
 
 '''Inputs/Variables'''                    
-print()
 server = input("Server Name:")
 database = input("Database Name:")
 auths = input("Authentication:")
@@ -30,7 +29,6 @@ class Sqlclass:
 
     def SqlConnect(self, auths: str):
         auth_list = ('Windows', 'Windows Authentication', 'Trusted Connection')
-        # TODO format these strings properly
         if auths in auth_list:
             trusted_conn = True
             params = quote_plus(
