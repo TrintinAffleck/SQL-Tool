@@ -54,8 +54,8 @@ class Sqlclass:
             'Driver={SQL Server};'
             f'Server={server};'
             f'Database={database};'
-            'UID=' + uid + ';'
-            'PWD=' + pwd + ';'
+            f'UID={uid};'
+            f'PWD={pwd};'
             'Trusted_Connection=no' + ';'
             'Autocommit=True'
             )
