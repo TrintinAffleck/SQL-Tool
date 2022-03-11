@@ -11,7 +11,8 @@ the findings, contribute your own code, and more.
 
 #How to use?
 Its pretty simple the program will ask you for the server,database,authentication of the database you
-want to connect to. If it is a trusted authentication (Enter either Windows, Windows Authentication or Trusted Connection). 
+want to connect to. If it is a trusted authentication (Enter either Windows, Windows Authentication or Trusted Connection).
+This application as far as I know only works with mssql as I have not tested on other sql databases.
 
 #Things I learned from this project.
 Dev environments
