@@ -5,8 +5,8 @@ from Reading_Script import *
 
 '''Inputs/Variables'''                    
 print()
-server = input("Server Name:") #or "TRINTIN-PC"
-database = input("Database Name:") #or "AdventureWorks2014"
+server = input("Server Name:")
+database = input("Database Name:")
 auths = input("Authentication:")
 trusted_conn: bool = False
 filenameinput = input ("FileName:")
@@ -95,25 +95,10 @@ class Sqlclass:
                 transaction.commit()
                 return output
                 
-    def test_cnn(self, server: str, database: str , auths: str,results, cols):
-        output = self.ExecuteSQLQuery(myobject,'SELECT TOP 1 1 AS CnnResult',results,cols)
-        print(output['CnnResult'][0])
-        if output['CnnResult'][0] != 1:
-            raise NameError('Could not connect to: ',
-            server, 
-            database,
-            auths
-            )
-        else:
-            print("Connected")
-
 
 '''Create Object'''
 myobject = Sqlclass
 
 '''Function Calls'''
-#myobject.SqlConnect(myobject,auths = auths) #debug params
-#myobject.ExecuteSQLQuery(myobject,query)
 myobject.Main(myobject)
-#myobject.test_cnn(myobject,server, database, auths, results, cols)
 
