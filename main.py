@@ -17,7 +17,8 @@ class Sqlclass:
     def Main(self) -> pd.DataFrame:
         if len(filenameinput) > 0:
             try:
-                excelfile = myobject.ExecuteSQLQuery(myobject,query,False,param = myobject.SqlConnect(myobject,auths))
+                self.SqlConnect(auths)
+                excelfile = self.ExecuteSQLQuery(query,False)
                 excelfile.to_excel(f'{filenameinput}.xlsx', 'HealthCheckSheet', index=False)
             except Exception:
                 print("Could not connect to database or execute query.")
@@ -103,5 +104,5 @@ class Sqlclass:
 myobject = Sqlclass
 
 '''Function Calls'''
-myobject.Main(myobject)
+myobject.Main()
 
