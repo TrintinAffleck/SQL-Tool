@@ -17,8 +17,12 @@ class Sqlclass:
     def Main(self) -> pd.DataFrame:
         if len(filenameinput) > 0:
             try:
+                print("Attempting Database Connection...")
                 self.SqlConnect(auths)
+                print("Connected to Database successfully.")
+                print("Attempting query execution...")
                 excelfile = self.ExecuteSQLQuery(query,False)
+                print("Executed query successfully")
                 excelfile.to_excel(f'{filenameinput}.xlsx', 'HealthCheckSheet', index=False)
             except Exception:
                 print("Could not connect to database or execute query.")
